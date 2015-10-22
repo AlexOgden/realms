@@ -32,7 +32,7 @@ public class RandomMob extends Mob {
 		List<Player> players = level.getPlayers(this, 90);
 
 		time++;
-		if (time % (RANDOM.nextInt(60) + 20) == 0) {
+		if (time % (RANDOM.nextInt(60) + 25) == 0) {
 			xa = RANDOM.nextInt(3) - 1;
 			ya = RANDOM.nextInt(3) - 1;
 			if (RANDOM.nextInt(55) == 0) {
