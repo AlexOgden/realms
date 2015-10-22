@@ -7,11 +7,12 @@ import javax.imageio.ImageIO;
 
 public class SpriteSheet {
 	
-	private String path;
+	private String path; //Path to sheet
 	public final int SIZE;
 	public final int WIDTH, HEIGHT;
 	public int[] pixels;
 	
+	//MAIN_SHEETS
 	public static SpriteSheet tiles = new SpriteSheet("/tex/sheets/spritesheet.png", 128);
 	public static SpriteSheet arrows = new SpriteSheet("/tex/sheets/arrowsSheet.png", 48);
 	public static SpriteSheet archer = new SpriteSheet("/tex/sheets/archerSheet.png", 128, 96);

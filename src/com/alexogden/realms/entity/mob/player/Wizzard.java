@@ -80,6 +80,7 @@ public class Wizzard extends Mob implements Player {
 			double dx = Math.abs(Mouse.getX()) - Game.getWindowWidth() / 2;
 			double dy = Math.abs(Mouse.getY()) - Game.getWindowHeight() / 2;
 			double dir = Math.atan2(dy, dx);
+			//If player entity is still, change direction of entity based on projectile dir
 			if(!walking) {
 				if(Math.round(dir) == -1) this.dir = Direction.UP;
 				if(Math.round(dir) == -2) this.dir = Direction.UP;
@@ -91,7 +92,7 @@ public class Wizzard extends Mob implements Player {
 				System.out.println(Math.round(dir));
 			}
 			shoot(x, y, dir);
-			fireRate = WizzardProjectile.FIRE_RATE; //TODO: Change to Arrow
+			fireRate = WizzardProjectile.FIRE_RATE;
 		}
 	}
 	

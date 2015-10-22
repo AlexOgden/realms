@@ -23,9 +23,9 @@ import com.alexogden.realms.util.Util;
 public class Game extends Canvas implements Runnable {
 	private static final long serialVersionUID = 1L;
 	
-	private static final int WIDTH = 274; //	300 450 274
-	private static final int HEIGHT = 154; //	168 250 154
-	private static final int SCALE = 5; // 		0	7	5
+	private static final int WIDTH = 274;
+	private static final int HEIGHT = 154;
+	private static final int SCALE = 5;
 	
 	public static final String strVersion = "Realms - Developed by Alex Ogden\nPre-Alpha 0.7.5";
 	public static final String gTitle = "Realms";
@@ -38,7 +38,7 @@ public class Game extends Canvas implements Runnable {
 	private int _frames = 0;
 	private int _ticks = 0;
 	
-	private String[] osProperties;
+	private String[] osProperties; //Store strings for os, arch, and JVersion
 	private boolean running = false;
 	private Thread thread;
 	private JFrame frame;
@@ -150,6 +150,7 @@ public class Game extends Canvas implements Runnable {
 			pixels[i] = screen.pixels[i];
 		}
 		
+		//Test for debug display overlay
 		Graphics g = bs.getDrawGraphics();
 		g.drawImage(image, 0, 0, getWidth(), getHeight(), null);
 		g.setColor(Color.WHITE);
