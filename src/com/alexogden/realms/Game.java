@@ -27,7 +27,7 @@ public class Game extends Canvas implements Runnable {
 	private static final int HEIGHT = 154;
 	private static final int SCALE = 5;
 	
-	public static final String strVersion = "Realms - Developed by Alex Ogden\nPre-Alpha 0.7.5";
+	public static final String strVersion = "Realms - Developed by Alex Ogden\nPre-Alpha 0.7.7";
 	public static final String gTitle = "Realms";
 	
 	private Screen screen;
@@ -58,6 +58,7 @@ public class Game extends Canvas implements Runnable {
 		
 		TileCoordinate pspawn = new TileCoordinate(13, 15);
 		player = new Wizzard(pspawn.x(), pspawn.y(), key);
+		//player = new Sorcerer(pspawn.x(), pspawn.y(), key);
 		player.init(level);
 		level.addPlayer(player);
 		

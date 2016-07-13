@@ -149,6 +149,10 @@ public class Level {
 			players.get(i).render(screen);
 		}
 	}
+
+	//A* Pathfinding algorithm
+	//Not working properly, still crashes.
+	//Still need to isolate the problem, seems unclear where the problem is occuring.
 	
 	public List<Node> findPath(Vector2i start, Vector2i goal) {
 		List<Node> openList = new ArrayList<Node>();
@@ -176,7 +180,8 @@ public class Level {
 			closedList.remove(current);
 
 			for (int i = 0; i < 9; i++) {
-				if (i == 4)continue;
+				if (i == 4)
+					continue;
 
 				int x = current.tile.getX();
 				int y = current.tile.getY();

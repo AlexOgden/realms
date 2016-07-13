@@ -102,7 +102,7 @@ public class RandomMob extends Mob {
 	
 	public void kill() {
 		this.sprite = Sprite.archer_dead;
-		new ParticleEmitter((int)x, (int)y, 1000, 250, level, 0xFF0000);
+		new ParticleEmitter((int)x, (int)y, 1000, 300, level, 0xFF0000);
 		dead = true;
 	}
 	
