@@ -150,6 +150,9 @@ public class Level {
 		}
 	}
 	
+	//A* Pathfinding Algorithm for Mobs
+	//Currently not working due to unknown error, needs code review
+	//TODO: Fix A*
 	public List<Node> findPath(Vector2i start, Vector2i goal) {
 		List<Node> openList = new ArrayList<Node>();
 		List<Node> closedList = new ArrayList<Node>();
