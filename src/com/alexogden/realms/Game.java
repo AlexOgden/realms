@@ -12,6 +12,7 @@ import java.awt.image.DataBufferInt;
 import javax.swing.JFrame;
 
 import com.alexogden.realms.entity.mob.player.Player;
+import com.alexogden.realms.entity.mob.player.Sorcerer;
 import com.alexogden.realms.entity.mob.player.Wizzard;
 import com.alexogden.realms.graphics.Screen;
 import com.alexogden.realms.input.Keyboard;

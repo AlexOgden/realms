@@ -32,10 +32,10 @@ public class ChaserMob extends Mob {
 		List<Player> players = level.getPlayers(this, 90);
 		if(players.size() > 0) {
 			Player player = players.get(0);
-			if (x < player.getX()) xa += 1;
-			if (x > player.getX()) xa -= 1;
-			if (y < player.getY()) ya += 1;
-			if (y > player.getY()) ya -= 1;
+			if ((x + 1) < player.getX()) xa += 1;
+			if ((x + 1) > player.getX()) xa -= 1;
+			if ((y + 1) < player.getY()) ya += 1;
+			if ((y + 1) > player.getY()) ya -= 1;
 			
 			if(this.bounds().intersects(players.get(0).bounds())) {
 				xa = 0;

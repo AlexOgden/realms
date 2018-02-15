@@ -43,7 +43,7 @@ public class Wizzard extends Mob implements Player {
 		double walkRate = 1;
 		
 		if(keyInput.shift) {
-			walkRate = 1.5;
+			walkRate = 5;
 		}else{
 			walkRate = 1;
 		}

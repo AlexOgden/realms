@@ -15,7 +15,7 @@ import com.alexogden.realms.graphics.Sprite;
 public class WizzardProjectile extends Projectile {
 	
 	protected final Random rand_Sprite_col = new Random();
-	public static final short FIRE_RATE = 30;
+	public static final short FIRE_RATE = 60;
 	
 	public WizzardProjectile(double x, double y, double dir, Player parent) {
 		super(x, y, dir, parent);
