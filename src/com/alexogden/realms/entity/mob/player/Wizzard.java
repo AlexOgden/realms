@@ -41,12 +41,8 @@ public class Wizzard extends Mob implements Player {
 		if(fireRate > 0) fireRate--;
 		
 		double walkRate = 1;
-		
-		if(keyInput.shift) {
-			walkRate = 5;
-		}else{
-			walkRate = 1;
-		}
+
+		walkRate = (keyInput.shift) ? 1.8 : 1;
 		
 		double xa = 0, ya = 0;
 		
@@ -55,8 +51,7 @@ public class Wizzard extends Mob implements Player {
 		} else if(keyInput.down) {
 			ya =+ walkRate;
 		}
-		
-		
+
 		if(keyInput.left) {
 			xa -= walkRate;
 		} else if(keyInput.right) {
@@ -70,7 +65,7 @@ public class Wizzard extends Mob implements Player {
 			walking = false;
 		}
 		
-		anim++;
+		++anim;
 		updateShooting();
 		clear();
 	}
@@ -146,7 +141,8 @@ public class Wizzard extends Mob implements Player {
 				}
 			}
 		}
-		
+		if(anim == Integer.MAX_VALUE)
+			anim = 0;
 		screen.renderMob((int) (x-16), (int) (y-16), sprite);
 	}
 	

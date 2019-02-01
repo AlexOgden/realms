@@ -28,8 +28,8 @@ public class Game extends Canvas implements Runnable {
 	private static final int HEIGHT = 154;
 	private static final int SCALE = 5;
 	
-	public static final String strVersion = "Realms - Developed by Alex Ogden\nPre-Alpha 0.7.7";
-	public static final String gTitle = "Realms";
+	private static final String strVersion = "Realms - Developed by Alex Ogden\nPre-Alpha 0.7.7";
+	private static final String gTitle = "Realms";
 	
 	private Screen screen;
 	private Keyboard key;
@@ -38,8 +38,7 @@ public class Game extends Canvas implements Runnable {
 	
 	private int _frames = 0;
 	private int _ticks = 0;
-	
-	private String[] osProperties; //Store strings for os, arch, and JVersion
+
 	private boolean running = false;
 	private Thread thread;
 	private JFrame frame;
@@ -68,11 +67,6 @@ public class Game extends Canvas implements Runnable {
 		Mouse mouse = new Mouse();
 		addMouseListener(mouse);
 		addMouseMotionListener(mouse);
-		
-		osProperties = new String[3];
-		osProperties[0] = System.getProperty("os.name");
-		osProperties[1] = System.getProperty("os.arch");
-		osProperties[2] = System.getProperty("java.version");
 	}
 
 	public synchronized void start() {

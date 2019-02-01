@@ -359,25 +359,45 @@ public class Level {
 	
 	public Tile getTile(int x, int y) {
 		if(x < 0 || y < 0 || x >= WIDTH || y >= HEIGHT) return Tile.voidTile;
-		if(tiles[x + y * WIDTH] == Tile.GRASS) return Tile.grass;
-		if(tiles[x + y * WIDTH] == Tile.GRASS_FLOWERS_DAISY) return Tile.grass_flowers_daisy;
-		if(tiles[x + y * WIDTH] == Tile.GRASS_FLOWERS_ROSE) return Tile.grass_flowers_rose;
-		if(tiles[x + y * WIDTH] == Tile.STONE_BRICK) return Tile.stone_brick;
-		if(tiles[x + y * WIDTH] == Tile.STONE_BRICK_MOSSY) return Tile.stone_brick_mossy;
-		if(tiles[x + y * WIDTH] == Tile.STONE_BRICK_CRACKED) return Tile.stone_brick_cracked;
-		if(tiles[x + y * WIDTH] == Tile.STONE_SLAB) return Tile.stone_slab;
-		if(tiles[x + y * WIDTH] == Tile.STONE) return Tile.stone;
-		if(tiles[x + y * WIDTH] == Tile.SAND) return Tile.sand;
-		if(tiles[x + y * WIDTH] == Tile.PLANKS_DARK) return Tile.planks_dark;
-		if(tiles[x + y * WIDTH] == Tile.PLANKS_LIGHT) return Tile.planks_light;
-		if(tiles[x + y * WIDTH] == Tile.PLANKS_OAK) return Tile.planks_oak;
-		if(tiles[x + y * WIDTH] == Tile.PLANKS_ACIA) return Tile.planks_acia;
-		if(tiles[x + y * WIDTH] == Tile.WOOD_FLOOR) return Tile.wood_floor;
-		if(tiles[x + y * WIDTH] == Tile.SNOW) return Tile.snow;
-		if(tiles[x + y * WIDTH] == Tile.DIRT) return Tile.dirt;
-		if(tiles[x + y * WIDTH] == Tile.GRASS_FLOWERS_ORANGE) return Tile.grass_flowers_orange;
-		if(tiles[x + y * WIDTH] == Tile.GRASS_FLOWERS_TULIP) return Tile.grass_flowers_tulip;
-		
-		return Tile.voidTile;
+		switch(tiles[x + y * WIDTH]) {
+			default:
+				return Tile.voidTile;
+			case Tile.GRASS:
+				return Tile.grass;
+			case Tile.GRASS_FLOWERS_DAISY:
+				return Tile.grass_flowers_daisy;
+			case Tile.GRASS_FLOWERS_ROSE:
+				return  Tile.grass_flowers_rose;
+			case Tile.GRASS_FLOWERS_ORANGE:
+				return Tile.grass_flowers_orange;
+			case Tile.GRASS_FLOWERS_TULIP:
+				return Tile.grass_flowers_tulip;
+			case Tile.STONE_BRICK:
+				return Tile.stone_brick;
+			case Tile.STONE_BRICK_CRACKED:
+				return Tile.stone_brick_cracked;
+			case Tile.STONE_BRICK_MOSSY:
+				return Tile.stone_brick_mossy;
+			case Tile.STONE_SLAB:
+				return Tile.stone_slab;
+			case Tile.STONE:
+				return Tile.stone;
+			case Tile.SAND:
+				return Tile.sand;
+			case Tile.PLANKS_DARK:
+				return Tile.planks_dark;
+			case Tile.PLANKS_ACIA:
+				return Tile.planks_acia;
+			case Tile.PLANKS_LIGHT:
+				return Tile.planks_light;
+			case Tile.PLANKS_OAK:
+				return Tile.planks_oak;
+			case Tile.WOOD_FLOOR:
+				return Tile.wood_floor;
+			case Tile.SNOW:
+				return Tile.snow;
+			case Tile.DIRT:
+				return Tile.dirt;
+		}
 	}
 }
